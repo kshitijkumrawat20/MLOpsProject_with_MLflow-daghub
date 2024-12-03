@@ -353,3 +353,12 @@ box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'l1_ratio'"
 [2024-12-04 00:00:22,516: INFO: common: created directory at: artifacts]
 [2024-12-04 00:00:22,518: INFO: common: created directory at: artifacts/model_evaluation]
 [2024-12-04 00:00:52,230: INFO: main: ----------stage Model Evaluation stage completed----------]
+[2024-12-04 00:17:35,027: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.241.211:8080]
+[2024-12-04 00:17:35,031: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-12-04 00:17:50,888: INFO: _internal: 192.168.241.211 - - [04/Dec/2024 00:17:50] "GET / HTTP/1.1" 200 -]
+[2024-12-04 00:17:52,288: INFO: _internal: 192.168.241.211 - - [04/Dec/2024 00:17:52] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -]
+[2024-12-04 00:20:19,392: INFO: _internal: 192.168.241.211 - - [04/Dec/2024 00:20:19] "POST /predict HTTP/1.1" 200 -]
+[2024-12-04 00:20:26,354: INFO: _internal: 192.168.241.211 - - [04/Dec/2024 00:20:26] "GET / HTTP/1.1" 200 -]

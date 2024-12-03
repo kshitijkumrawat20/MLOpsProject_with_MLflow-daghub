@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wine Quality Prediction Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        h1 {
+            color: #8e44ad;
+        }
+        .result {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        .prediction {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            background-color: #8e44ad;
+            color: #fff;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+        .back-link:hover {
+            background-color: #732d91;
+        }
+    </style>
+</head>
+<body>
+    <h1>Wine Quality Prediction Result</h1>
+    <div class="result">
+        <p>The predicted wine quality is:</p>
+        <p class="prediction">{{ prediction }}</p>
+    </div>
+    <a href="{{ url_for('homePage') }}" class="back-link">Make Another Prediction</a>
+</body>
+</html>
+
