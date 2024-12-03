@@ -2,8 +2,7 @@ import os
 from src.project import logger
 from sklearn.model_selection import train_test_split
 import pandas as pd
-from src.project.config.configuration import DataTransformationConfig
-
+from src.project.entity.config_entity import DataTransformationConfig
 class DataTransformation:
     def __init__(self, config:DataTransformationConfig):
         self.config = config

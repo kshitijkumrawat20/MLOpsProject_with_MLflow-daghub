@@ -1,6 +1,6 @@
 from src.project.constants import *
 from src.project.utils.common import read_yaml, create_directories
-from src.project.entity.config_entity import DataIngestionConfig, DataValidationConfig, DataTransformationConfig, ModelTrainerConfig
+from src.project.entity.config_entity import DataIngestionConfig, DataValidationConfig, DataTransformationConfig, ModelTrainerConfig, ModelEvaluationConfig
 class ConfiguratuionManager: # this class read the yaml files and create directories, 
     def __init__(self, 
                  config_filepath = CONFIG_FILE_PATH,
@@ -59,6 +59,21 @@ class ConfiguratuionManager: # this class read the yaml files and create directo
             l1_ratio= params.l1_ratio,
             target_column= schema.name
         )
-        return model_trainer_config
+        return model_trainer_config 
+    def get_model_evaluation(self)-> ModelEvaluationConfig:
+        config = self.config.model_evalutation
+        params= self.params.ElasticNet
+        schema = self.schema.TARGET_COLUMN
+        create_directories([config.root_dir])
+        model_evaluation_config = ModelEvaluationConfig(
+            root_dir= config.root_dir,
+            test_data_path= config.test_data_path,
+            model_path= config.model_path,
+            metric_file_name = config.metric_file_name,
+            target_column= schema.name,
+            all_params= params,
+            mlflow_uri= "https://dagshub.com/kshitijk146/MLOpsProject_with_MLflow-daghub.mlflow"
+        )
+        return model_evaluation_config 
     
     

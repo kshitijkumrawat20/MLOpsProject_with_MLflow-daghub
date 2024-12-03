@@ -2,7 +2,7 @@ import os
 from src.project import logger
 from sklearn.linear_model import ElasticNet
 import pandas as pd
-from src.project.config.configuration import ModelTrainerConfig
+from src.project.entity.config_entity import ModelTrainerConfig
 import joblib
 
 class ModelTrainer: 

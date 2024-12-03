@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/code/MLOPS/MlOpsProjects/New%20folder/mlruns/0/f8f70dae3e6a477ab486cac82e1727af/artifacts
+end_time: 1733249821134
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: f8f70dae3e6a477ab486cac82e1727af
+run_name: puzzled-gnat-978
+run_uuid: f8f70dae3e6a477ab486cac82e1727af
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1733249794477
+status: 3
+tags: []
+user_id: hp

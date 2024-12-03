@@ -1,48 +1,10 @@
-[2024-12-01 14:11:13,035: INFO: main: Welcome to the project]
-[2024-12-02 18:29:58,843: INFO: main: ----------stage Data Ingestion stage started----------]
-[2024-12-02 18:29:58,849: INFO: common: yaml file: config\config.yaml loaded sucessfully ]
-[2024-12-02 18:29:58,852: INFO: common: yaml file: params.yaml loaded sucessfully ]
-[2024-12-02 18:29:58,854: ERROR: main: yaml is empty]
-Traceback (most recent call last):
-  File "C:\code\MLOPS\MlOpsProjects\New folder\src\project\utils\common.py", line 28, in read_yaml
-    return ConfigBox(content)
-  File "box\\box.py", line 296, in box.box.Box.__init__
-box.exceptions.BoxValueError: First argument must be mapping or iterable
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "C:\code\MLOPS\MlOpsProjects\New folder\main.py", line 7, in <module>
-    obj.intiate_data_ingestion()
-  File "C:\code\MLOPS\MlOpsProjects\New folder\src\project\pipeline\data_ingestion.py", line 11, in intiate_data_ingestion
-    config= ConfiguratuionManager()
-  File "C:\code\MLOPS\MlOpsProjects\New folder\src\project\config\configuration.py", line 10, in __init__
-    self.params = read_yaml(params_file_path),
-  File "C:\code\MLOPS\venv\lib\site-packages\ensure\main.py", line 872, in __call__
-    return_val = self.f(*args, **kwargs)
-  File "C:\code\MLOPS\MlOpsProjects\New folder\src\project\utils\common.py", line 30, in read_yaml
-    raise ValueError("yaml is empty")
-ValueError: yaml is empty
-[2024-12-02 18:30:31,499: INFO: main: ----------stage Data Ingestion stage started----------]
-[2024-12-02 18:30:31,503: INFO: common: yaml file: config\config.yaml loaded sucessfully ]
-[2024-12-02 18:30:31,527: INFO: common: yaml file: params.yaml loaded sucessfully ]
-[2024-12-02 18:30:31,531: INFO: common: yaml file: schema.yaml loaded sucessfully ]
-[2024-12-02 18:30:31,532: ERROR: main: 'tuple' object has no attribute 'artifacts_root']
-Traceback (most recent call last):
-  File "C:\code\MLOPS\MlOpsProjects\New folder\main.py", line 7, in <module>
-    obj.intiate_data_ingestion()
-  File "C:\code\MLOPS\MlOpsProjects\New folder\src\project\pipeline\data_ingestion.py", line 11, in intiate_data_ingestion
-    config= ConfiguratuionManager()
-  File "C:\code\MLOPS\MlOpsProjects\New folder\src\project\config\configuration.py", line 13, in __init__
-    create_directories([self.config.artifacts_root])
-AttributeError: 'tuple' object has no attribute 'artifacts_root'
-[2024-12-02 18:33:12,981: INFO: main: ----------stage Data Ingestion stage started----------]
-[2024-12-02 18:33:12,988: INFO: common: yaml file: config\config.yaml loaded sucessfully ]
-[2024-12-02 18:33:12,991: INFO: common: yaml file: params.yaml loaded sucessfully ]
-[2024-12-02 18:33:12,994: INFO: common: yaml file: schema.yaml loaded sucessfully ]
-[2024-12-02 18:33:12,998: INFO: common: created directory at: artifacts]
-[2024-12-02 18:33:13,001: INFO: common: created directory at: artifacts/data_ingestion]
-[2024-12-02 18:33:14,683: INFO: data_ingest: artifacts/data_ingestion/data.zip downnloaded! info: Connection: close
+[2024-12-03 23:13:08,914: INFO: main: ----------stage Data Ingestion stage started----------]
+[2024-12-03 23:13:08,923: INFO: common: yaml file: config\config.yaml loaded sucessfully ]
+[2024-12-03 23:13:08,924: INFO: common: yaml file: params.yaml loaded sucessfully ]
+[2024-12-03 23:13:08,927: INFO: common: yaml file: schema.yaml loaded sucessfully ]
+[2024-12-03 23:13:08,928: INFO: common: created directory at: artifacts]
+[2024-12-03 23:13:08,929: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-12-03 23:13:10,448: INFO: data_ingest: artifacts/data_ingestion/data.zip downnloaded! info: Connection: close
 Content-Length: 23329
 Cache-Control: max-age=300
 Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
@@ -52,20 +14,342 @@ Strict-Transport-Security: max-age=31536000
 X-Content-Type-Options: nosniff
 X-Frame-Options: deny
 X-XSS-Protection: 1; mode=block
-X-GitHub-Request-Id: 85FD:2932EB:2E5C1:35D33:674DB018
+X-GitHub-Request-Id: DFBB:35F713:313CB:3C129:674F3F6E
 Accept-Ranges: bytes
-Date: Mon, 02 Dec 2024 13:03:21 GMT
+Date: Tue, 03 Dec 2024 17:43:10 GMT
 Via: 1.1 varnish
-X-Served-By: cache-hyd1100030-HYD
-X-Cache: MISS
+X-Served-By: cache-hyd1100033-HYD
+X-Cache: HIT
 X-Cache-Hits: 0
-X-Timer: S1733144601.762972,VS0,VE287
+X-Timer: S1733247790.940361,VS0,VE304
 Vary: Authorization,Accept-Encoding,Origin
 Access-Control-Allow-Origin: *
 Cross-Origin-Resource-Policy: cross-origin
-X-Fastly-Request-ID: 948ec0ec6c368f2a0f18e9bf5dd61b3667c91978
-Expires: Mon, 02 Dec 2024 13:08:21 GMT
+X-Fastly-Request-ID: 9091839fe5297482fdb1fd7a06ee2726ab8a3e63
+Expires: Tue, 03 Dec 2024 17:48:10 GMT
 Source-Age: 0
 
 ]
-[2024-12-02 18:33:14,719: INFO: main: ----------stage Data Ingestion stage completed----------]
+[2024-12-03 23:13:10,485: INFO: main: ----------stage Data Ingestion stage completed----------]
+[2024-12-03 23:13:10,489: INFO: main: ----------stage Data validation stage started----------]
+[2024-12-03 23:13:10,500: INFO: common: yaml file: config\config.yaml loaded sucessfully ]
+[2024-12-03 23:13:10,505: INFO: common: yaml file: params.yaml loaded sucessfully ]
+[2024-12-03 23:13:10,511: INFO: common: yaml file: schema.yaml loaded sucessfully ]
+[2024-12-03 23:13:10,513: INFO: common: created directory at: artifacts]
+[2024-12-03 23:13:10,515: INFO: common: created directory at: artifacts/data_validation]
+[2024-12-03 23:13:10,563: INFO: main: ----------stage Data validation stage completed----------]
+[2024-12-03 23:13:10,565: INFO: main: ----------stage Data transformation stage started----------]
+[2024-12-03 23:13:10,580: INFO: common: yaml file: config\config.yaml loaded sucessfully ]
+[2024-12-03 23:13:10,583: INFO: common: yaml file: params.yaml loaded sucessfully ]
+[2024-12-03 23:13:10,604: INFO: common: yaml file: schema.yaml loaded sucessfully ]
+[2024-12-03 23:13:10,607: INFO: common: created directory at: artifacts]
+[2024-12-03 23:13:10,609: INFO: common: created directory at: artifacts/data_transformation]
+[2024-12-03 23:13:10,650: INFO: data_transformation: train test split done!]
+[2024-12-03 23:13:10,654: INFO: data_transformation: (1199, 12)]
+[2024-12-03 23:13:10,655: INFO: data_transformation: (400, 12)]
+[2024-12-03 23:13:10,656: INFO: main: ----------stage Data transformation stage completed----------]
+[2024-12-03 23:13:10,657: INFO: main: ----------stage Model Training stage started----------]
+[2024-12-03 23:13:10,663: INFO: common: yaml file: config\config.yaml loaded sucessfully ]
+[2024-12-03 23:13:10,667: INFO: common: yaml file: params.yaml loaded sucessfully ]
+[2024-12-03 23:13:10,680: INFO: common: yaml file: schema.yaml loaded sucessfully ]
+[2024-12-03 23:13:10,683: INFO: common: created directory at: artifacts]
+[2024-12-03 23:13:10,691: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-12-03 23:13:10,694: INFO: model_trainer: Training the model]
+[2024-12-03 23:13:10,696: ERROR: main: 'DataIngestionConfig' object has no attribute 'train_data_path']
+Traceback (most recent call last):
+  File "C:\code\MLOPS\MlOpsProjects\New folder\main.py", line 41, in <module>
+    obj.initiate_model_training()
+  File "C:\code\MLOPS\MlOpsProjects\New folder\src\project\pipeline\model_trainer.py", line 14, in initiate_model_training
+    model_trainer_config.train()
+  File "C:\code\MLOPS\MlOpsProjects\New folder\src\project\components\model_trainer.py", line 14, in train
+    train_data = pd.read_csv(self.config.train_data_path)
+AttributeError: 'DataIngestionConfig' object has no attribute 'train_data_path'
+[2024-12-03 23:16:31,981: INFO: main: ----------stage Data Ingestion stage started----------]
+[2024-12-03 23:16:32,008: INFO: common: yaml file: config\config.yaml loaded sucessfully ]
+[2024-12-03 23:16:32,012: INFO: common: yaml file: params.yaml loaded sucessfully ]
+[2024-12-03 23:16:32,018: INFO: common: yaml file: schema.yaml loaded sucessfully ]
+[2024-12-03 23:16:32,020: INFO: common: created directory at: artifacts]
+[2024-12-03 23:16:32,021: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-12-03 23:16:32,021: INFO: data_ingest: File already exists of size: 23329]
+[2024-12-03 23:16:32,028: INFO: main: ----------stage Data Ingestion stage completed----------]
+[2024-12-03 23:16:32,030: INFO: main: ----------stage Data validation stage started----------]
+[2024-12-03 23:16:32,040: INFO: common: yaml file: config\config.yaml loaded sucessfully ]
+[2024-12-03 23:16:32,044: INFO: common: yaml file: params.yaml loaded sucessfully ]
+[2024-12-03 23:16:32,051: INFO: common: yaml file: schema.yaml loaded sucessfully ]
+[2024-12-03 23:16:32,053: INFO: common: created directory at: artifacts]
+[2024-12-03 23:16:32,056: INFO: common: created directory at: artifacts/data_validation]
+[2024-12-03 23:16:32,103: INFO: main: ----------stage Data validation stage completed----------]
+[2024-12-03 23:16:32,104: INFO: main: ----------stage Data transformation stage started----------]
+[2024-12-03 23:16:32,120: INFO: common: yaml file: config\config.yaml loaded sucessfully ]
+[2024-12-03 23:16:32,123: INFO: common: yaml file: params.yaml loaded sucessfully ]
+[2024-12-03 23:16:32,138: INFO: common: yaml file: schema.yaml loaded sucessfully ]
+[2024-12-03 23:16:32,140: INFO: common: created directory at: artifacts]
+[2024-12-03 23:16:32,157: INFO: common: created directory at: artifacts/data_transformation]
+[2024-12-03 23:16:32,219: INFO: data_transformation: train test split done!]
+[2024-12-03 23:16:32,220: INFO: data_transformation: (1199, 12)]
+[2024-12-03 23:16:32,221: INFO: data_transformation: (400, 12)]
+[2024-12-03 23:16:32,228: INFO: main: ----------stage Data transformation stage completed----------]
+[2024-12-03 23:16:32,232: INFO: main: ----------stage Model Training stage started----------]
+[2024-12-03 23:16:32,274: INFO: common: yaml file: config\config.yaml loaded sucessfully ]
+[2024-12-03 23:16:32,289: INFO: common: yaml file: params.yaml loaded sucessfully ]
+[2024-12-03 23:16:32,304: INFO: common: yaml file: schema.yaml loaded sucessfully ]
+[2024-12-03 23:16:32,312: INFO: common: created directory at: artifacts]
+[2024-12-03 23:16:32,315: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-12-03 23:16:32,319: INFO: model_trainer: Training the model]
+[2024-12-03 23:16:32,321: ERROR: main: 'DataIngestionConfig' object has no attribute 'train_data_path']
+Traceback (most recent call last):
+  File "C:\code\MLOPS\MlOpsProjects\New folder\main.py", line 41, in <module>
+    obj.initiate_model_training()
+  File "C:\code\MLOPS\MlOpsProjects\New folder\src\project\pipeline\model_trainer.py", line 14, in initiate_model_training
+    model_trainer_config.train()
+  File "C:\code\MLOPS\MlOpsProjects\New folder\src\project\components\model_trainer.py", line 14, in train
+    train_data = pd.read_csv(self.config.train_data_path)
+AttributeError: 'DataIngestionConfig' object has no attribute 'train_data_path'
+[2024-12-03 23:28:43,151: INFO: main: ----------stage Data Ingestion stage started----------]
+[2024-12-03 23:28:43,159: INFO: common: yaml file: config\config.yaml loaded sucessfully ]
+[2024-12-03 23:28:43,166: INFO: common: yaml file: params.yaml loaded sucessfully ]
+[2024-12-03 23:28:43,178: INFO: common: yaml file: schema.yaml loaded sucessfully ]
+[2024-12-03 23:28:43,180: INFO: common: created directory at: artifacts]
+[2024-12-03 23:28:43,181: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-12-03 23:28:43,186: INFO: data_ingest: File already exists of size: 23329]
+[2024-12-03 23:28:43,197: INFO: main: ----------stage Data Ingestion stage completed----------]
+[2024-12-03 23:28:43,201: INFO: main: ----------stage Data validation stage started----------]
+[2024-12-03 23:28:43,211: INFO: common: yaml file: config\config.yaml loaded sucessfully ]
+[2024-12-03 23:28:43,213: INFO: common: yaml file: params.yaml loaded sucessfully ]
+[2024-12-03 23:28:43,224: INFO: common: yaml file: schema.yaml loaded sucessfully ]
+[2024-12-03 23:28:43,231: INFO: common: created directory at: artifacts]
+[2024-12-03 23:28:43,237: INFO: common: created directory at: artifacts/data_validation]
+[2024-12-03 23:28:43,292: INFO: main: ----------stage Data validation stage completed----------]
+[2024-12-03 23:28:43,293: INFO: main: ----------stage Data transformation stage started----------]
+[2024-12-03 23:28:43,314: INFO: common: yaml file: config\config.yaml loaded sucessfully ]
+[2024-12-03 23:28:43,318: INFO: common: yaml file: params.yaml loaded sucessfully ]
+[2024-12-03 23:28:43,321: INFO: common: yaml file: schema.yaml loaded sucessfully ]
+[2024-12-03 23:28:43,323: INFO: common: created directory at: artifacts]
+[2024-12-03 23:28:43,324: INFO: common: created directory at: artifacts/data_transformation]
+[2024-12-03 23:28:43,376: INFO: data_transformation: train test split done!]
+[2024-12-03 23:28:43,377: INFO: data_transformation: (1199, 12)]
+[2024-12-03 23:28:43,377: INFO: data_transformation: (400, 12)]
+[2024-12-03 23:28:43,379: INFO: main: ----------stage Data transformation stage completed----------]
+[2024-12-03 23:28:43,379: INFO: main: ----------stage Model Training stage started----------]
+[2024-12-03 23:28:43,388: INFO: common: yaml file: config\config.yaml loaded sucessfully ]
+[2024-12-03 23:28:43,391: INFO: common: yaml file: params.yaml loaded sucessfully ]
+[2024-12-03 23:28:43,396: INFO: common: yaml file: schema.yaml loaded sucessfully ]
+[2024-12-03 23:28:43,398: INFO: common: created directory at: artifacts]
+[2024-12-03 23:28:43,399: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-12-03 23:28:43,401: INFO: model_trainer: Training the model]
+[2024-12-03 23:28:43,404: ERROR: main: 'DataIngestionConfig' object has no attribute 'train_data_path']
+Traceback (most recent call last):
+  File "C:\code\MLOPS\MlOpsProjects\New folder\main.py", line 41, in <module>
+    obj.initiate_model_training()
+  File "C:\code\MLOPS\MlOpsProjects\New folder\src\project\pipeline\model_trainer.py", line 14, in initiate_model_training
+    model_trainer_config.train()
+  File "C:\code\MLOPS\MlOpsProjects\New folder\src\project\components\model_trainer.py", line 14, in train
+    train_data = pd.read_csv(self.config.train_data_path)
+AttributeError: 'DataIngestionConfig' object has no attribute 'train_data_path'
+[2024-12-03 23:37:43,490: INFO: main: ----------stage Data Ingestion stage started----------]
+[2024-12-03 23:37:43,501: INFO: common: yaml file: config\config.yaml loaded sucessfully ]
+[2024-12-03 23:37:43,505: INFO: common: yaml file: params.yaml loaded sucessfully ]
+[2024-12-03 23:37:43,510: INFO: common: yaml file: schema.yaml loaded sucessfully ]
+[2024-12-03 23:37:43,511: INFO: common: created directory at: artifacts]
+[2024-12-03 23:37:43,514: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-12-03 23:37:43,516: INFO: data_ingest: File already exists of size: 23329]
+[2024-12-03 23:37:43,523: INFO: main: ----------stage Data Ingestion stage completed----------]
+[2024-12-03 23:37:43,528: INFO: main: ----------stage Data validation stage started----------]
+[2024-12-03 23:37:43,551: INFO: common: yaml file: config\config.yaml loaded sucessfully ]
+[2024-12-03 23:37:43,556: INFO: common: yaml file: params.yaml loaded sucessfully ]
+[2024-12-03 23:37:43,561: INFO: common: yaml file: schema.yaml loaded sucessfully ]
+[2024-12-03 23:37:43,574: INFO: common: created directory at: artifacts]
+[2024-12-03 23:37:43,576: INFO: common: created directory at: artifacts/data_validation]
+[2024-12-03 23:37:43,637: INFO: main: ----------stage Data validation stage completed----------]
+[2024-12-03 23:37:43,639: INFO: main: ----------stage Data transformation stage started----------]
+[2024-12-03 23:37:43,651: INFO: common: yaml file: config\config.yaml loaded sucessfully ]
+[2024-12-03 23:37:43,657: INFO: common: yaml file: params.yaml loaded sucessfully ]
+[2024-12-03 23:37:43,665: INFO: common: yaml file: schema.yaml loaded sucessfully ]
+[2024-12-03 23:37:43,667: INFO: common: created directory at: artifacts]
+[2024-12-03 23:37:43,668: INFO: common: created directory at: artifacts/data_transformation]
+[2024-12-03 23:37:43,731: INFO: data_transformation: train test split done!]
+[2024-12-03 23:37:43,734: INFO: data_transformation: (1199, 12)]
+[2024-12-03 23:37:43,741: INFO: data_transformation: (400, 12)]
+[2024-12-03 23:37:43,743: INFO: main: ----------stage Data transformation stage completed----------]
+[2024-12-03 23:37:43,744: INFO: main: ----------stage Model Training stage started----------]
+[2024-12-03 23:37:43,756: INFO: common: yaml file: config\config.yaml loaded sucessfully ]
+[2024-12-03 23:37:43,770: INFO: common: yaml file: params.yaml loaded sucessfully ]
+[2024-12-03 23:37:43,792: INFO: common: yaml file: schema.yaml loaded sucessfully ]
+[2024-12-03 23:37:43,808: INFO: common: created directory at: artifacts]
+[2024-12-03 23:37:43,810: INFO: common: created directory at: artifacts/model_trainer]
+[2024-12-03 23:37:43,811: ERROR: main: "'ConfigBox' object has no attribute 'l1_ratio'"]
+Traceback (most recent call last):
+  File "box\\box.py", line 593, in box.box.Box.__getitem__
+KeyError: 'l1_ratio'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 632, in box.box.Box.__getattr__
+  File "box\\box.py", line 620, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'l1_ratio'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 634, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'l1_ratio'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\\config_box.py", line 29, in box.config_box.ConfigBox.__getattr__
+  File "box\\box.py", line 648, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'l1_ratio'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 593, in box.box.Box.__getitem__
+KeyError: 'l1_ratio'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 632, in box.box.Box.__getattr__
+  File "box\\box.py", line 620, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'l1_ratio'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\\box.py", line 634, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'l1_ratio'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\code\MLOPS\MlOpsProjects\New folder\main.py", line 41, in <module>
+    obj.initiate_model_training()
+  File "C:\code\MLOPS\MlOpsProjects\New folder\src\project\pipeline\model_trainer.py", line 12, in initiate_model_training
+    model_trainer_config = config.get_model_trainer()
+  File "C:\code\MLOPS\MlOpsProjects\New folder\src\project\config\configuration.py", line 59, in get_model_trainer
+    l1_ratio= params.l1_ratio,
+  File "box\\config_box.py", line 31, in box.config_box.ConfigBox.__getattr__
+  File "box\\box.py", line 648, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'l1_ratio'"
+[2024-12-03 23:39:39,264: INFO: main: ----------stage Data Ingestion stage started----------]
+[2024-12-03 23:39:39,271: INFO: common: yaml file: config\config.yaml loaded sucessfully ]
+[2024-12-03 23:39:39,280: INFO: common: yaml file: params.yaml loaded sucessfully ]
+[2024-12-03 23:39:39,286: INFO: common: yaml file: schema.yaml loaded sucessfully ]
+[2024-12-03 23:39:39,287: INFO: common: created directory at: artifacts]
+[2024-12-03 23:39:39,288: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-12-03 23:39:39,288: INFO: data_ingest: File already exists of size: 23329]
+[2024-12-03 23:39:39,294: INFO: main: ----------stage Data Ingestion stage completed----------]
+[2024-12-03 23:39:39,294: INFO: main: ----------stage Data validation stage started----------]
+[2024-12-03 23:39:39,304: INFO: common: yaml file: config\config.yaml loaded sucessfully ]
+[2024-12-03 23:39:39,310: INFO: common: yaml file: params.yaml loaded sucessfully ]
+[2024-12-03 23:39:39,319: INFO: common: yaml file: schema.yaml loaded sucessfully ]
+[2024-12-03 23:39:39,320: INFO: common: created directory at: artifacts]
+[2024-12-03 23:39:39,321: INFO: common: created directory at: artifacts/data_validation]
+[2024-12-03 23:39:39,363: INFO: main: ----------stage Data validation stage completed----------]
+[2024-12-03 23:39:39,364: INFO: main: ----------stage Data transformation stage started----------]
+[2024-12-03 23:39:39,375: INFO: common: yaml file: config\config.yaml loaded sucessfully ]
+[2024-12-03 23:39:39,377: INFO: common: yaml file: params.yaml loaded sucessfully ]
+[2024-12-03 23:39:39,380: INFO: common: yaml file: schema.yaml loaded sucessfully ]
+[2024-12-03 23:39:39,384: INFO: common: created directory at: artifacts]
+[2024-12-03 23:39:39,385: INFO: common: created directory at: artifacts/data_transformation]
+[2024-12-03 23:39:39,429: INFO: data_transformation: train test split done!]
+[2024-12-03 23:39:39,430: INFO: data_transformation: (1199, 12)]
+[2024-12-03 23:39:39,430: INFO: data_transformation: (400, 12)]
+[2024-12-03 23:39:39,431: INFO: main: ----------stage Data transformation stage completed----------]
+[2024-12-03 23:39:39,431: INFO: main: ----------stage Model Training stage started----------]
+[2024-12-03 23:39:39,436: INFO: common: yaml file: config\config.yaml loaded sucessfully ]
+[2024-12-03 23:39:39,439: INFO: common: yaml file: params.yaml loaded sucessfully ]
+[2024-12-03 23:39:39,445: INFO: common: yaml file: schema.yaml loaded sucessfully ]
+[2024-12-03 23:39:39,450: INFO: common: created directory at: artifacts]
+[2024-12-03 23:39:39,451: INFO: common: created directory at: artifacts/model_trainer]
+[2024-12-03 23:39:39,453: INFO: model_trainer: Training the model]
+[2024-12-03 23:39:39,518: INFO: main: ----------stage Model Training stage completed----------]
+[2024-12-03 23:39:39,519: INFO: main: ----------stage Model Evaluation stage started----------]
+[2024-12-03 23:39:39,526: INFO: common: yaml file: config\config.yaml loaded sucessfully ]
+[2024-12-03 23:39:39,528: INFO: common: yaml file: params.yaml loaded sucessfully ]
+[2024-12-03 23:39:39,538: INFO: common: yaml file: schema.yaml loaded sucessfully ]
+[2024-12-03 23:39:39,540: INFO: common: created directory at: artifacts]
+[2024-12-03 23:39:39,541: INFO: common: created directory at: artifacts/model_evaluation]
+[2024-12-03 23:39:41,871: INFO: main: ----------stage Model Evaluation stage completed----------]
+[2024-12-03 23:46:31,589: INFO: main: ----------stage Data Ingestion stage started----------]
+[2024-12-03 23:46:31,602: INFO: common: yaml file: config\config.yaml loaded sucessfully ]
+[2024-12-03 23:46:31,605: INFO: common: yaml file: params.yaml loaded sucessfully ]
+[2024-12-03 23:46:31,611: INFO: common: yaml file: schema.yaml loaded sucessfully ]
+[2024-12-03 23:46:31,619: INFO: common: created directory at: artifacts]
+[2024-12-03 23:46:31,623: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-12-03 23:46:31,623: INFO: data_ingest: File already exists of size: 23329]
+[2024-12-03 23:46:31,653: INFO: main: ----------stage Data Ingestion stage completed----------]
+[2024-12-03 23:46:31,668: INFO: main: ----------stage Data validation stage started----------]
+[2024-12-03 23:46:31,698: INFO: common: yaml file: config\config.yaml loaded sucessfully ]
+[2024-12-03 23:46:31,701: INFO: common: yaml file: params.yaml loaded sucessfully ]
+[2024-12-03 23:46:31,709: INFO: common: yaml file: schema.yaml loaded sucessfully ]
+[2024-12-03 23:46:31,712: INFO: common: created directory at: artifacts]
+[2024-12-03 23:46:31,714: INFO: common: created directory at: artifacts/data_validation]
+[2024-12-03 23:46:31,770: INFO: main: ----------stage Data validation stage completed----------]
+[2024-12-03 23:46:31,771: INFO: main: ----------stage Data transformation stage started----------]
+[2024-12-03 23:46:31,785: INFO: common: yaml file: config\config.yaml loaded sucessfully ]
+[2024-12-03 23:46:31,787: INFO: common: yaml file: params.yaml loaded sucessfully ]
+[2024-12-03 23:46:31,794: INFO: common: yaml file: schema.yaml loaded sucessfully ]
+[2024-12-03 23:46:31,800: INFO: common: created directory at: artifacts]
+[2024-12-03 23:46:31,802: INFO: common: created directory at: artifacts/data_transformation]
+[2024-12-03 23:46:31,856: INFO: data_transformation: train test split done!]
+[2024-12-03 23:46:31,857: INFO: data_transformation: (1199, 12)]
+[2024-12-03 23:46:31,858: INFO: data_transformation: (400, 12)]
+[2024-12-03 23:46:31,859: INFO: main: ----------stage Data transformation stage completed----------]
+[2024-12-03 23:46:31,859: INFO: main: ----------stage Model Training stage started----------]
+[2024-12-03 23:46:31,868: INFO: common: yaml file: config\config.yaml loaded sucessfully ]
+[2024-12-03 23:46:31,871: INFO: common: yaml file: params.yaml loaded sucessfully ]
+[2024-12-03 23:46:31,875: INFO: common: yaml file: schema.yaml loaded sucessfully ]
+[2024-12-03 23:46:31,877: INFO: common: created directory at: artifacts]
+[2024-12-03 23:46:31,878: INFO: common: created directory at: artifacts/model_trainer]
+[2024-12-03 23:46:31,879: INFO: model_trainer: Training the model]
+[2024-12-03 23:46:31,951: INFO: main: ----------stage Model Training stage completed----------]
+[2024-12-03 23:46:31,951: INFO: main: ----------stage Model Evaluation stage started----------]
+[2024-12-03 23:46:31,961: INFO: common: yaml file: config\config.yaml loaded sucessfully ]
+[2024-12-03 23:46:31,967: INFO: common: yaml file: params.yaml loaded sucessfully ]
+[2024-12-03 23:46:31,973: INFO: common: yaml file: schema.yaml loaded sucessfully ]
+[2024-12-03 23:46:31,974: INFO: common: created directory at: artifacts]
+[2024-12-03 23:46:31,975: INFO: common: created directory at: artifacts/model_evaluation]
+[2024-12-03 23:47:01,139: INFO: main: ----------stage Model Evaluation stage completed----------]
+[2024-12-04 00:00:22,155: INFO: main: ----------stage Data Ingestion stage started----------]
+[2024-12-04 00:00:22,170: INFO: common: yaml file: config\config.yaml loaded sucessfully ]
+[2024-12-04 00:00:22,172: INFO: common: yaml file: params.yaml loaded sucessfully ]
+[2024-12-04 00:00:22,179: INFO: common: yaml file: schema.yaml loaded sucessfully ]
+[2024-12-04 00:00:22,180: INFO: common: created directory at: artifacts]
+[2024-12-04 00:00:22,180: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-12-04 00:00:22,181: INFO: data_ingest: File already exists of size: 23329]
+[2024-12-04 00:00:22,186: INFO: main: ----------stage Data Ingestion stage completed----------]
+[2024-12-04 00:00:22,187: INFO: main: ----------stage Data validation stage started----------]
+[2024-12-04 00:00:22,200: INFO: common: yaml file: config\config.yaml loaded sucessfully ]
+[2024-12-04 00:00:22,213: INFO: common: yaml file: params.yaml loaded sucessfully ]
+[2024-12-04 00:00:22,219: INFO: common: yaml file: schema.yaml loaded sucessfully ]
+[2024-12-04 00:00:22,220: INFO: common: created directory at: artifacts]
+[2024-12-04 00:00:22,221: INFO: common: created directory at: artifacts/data_validation]
+[2024-12-04 00:00:22,272: INFO: main: ----------stage Data validation stage completed----------]
+[2024-12-04 00:00:22,277: INFO: main: ----------stage Data transformation stage started----------]
+[2024-12-04 00:00:22,304: INFO: common: yaml file: config\config.yaml loaded sucessfully ]
+[2024-12-04 00:00:22,312: INFO: common: yaml file: params.yaml loaded sucessfully ]
+[2024-12-04 00:00:22,316: INFO: common: yaml file: schema.yaml loaded sucessfully ]
+[2024-12-04 00:00:22,318: INFO: common: created directory at: artifacts]
+[2024-12-04 00:00:22,320: INFO: common: created directory at: artifacts/data_transformation]
+[2024-12-04 00:00:22,372: INFO: data_transformation: train test split done!]
+[2024-12-04 00:00:22,376: INFO: data_transformation: (1199, 12)]
+[2024-12-04 00:00:22,378: INFO: data_transformation: (400, 12)]
+[2024-12-04 00:00:22,380: INFO: main: ----------stage Data transformation stage completed----------]
+[2024-12-04 00:00:22,381: INFO: main: ----------stage Model Training stage started----------]
+[2024-12-04 00:00:22,388: INFO: common: yaml file: config\config.yaml loaded sucessfully ]
+[2024-12-04 00:00:22,394: INFO: common: yaml file: params.yaml loaded sucessfully ]
+[2024-12-04 00:00:22,402: INFO: common: yaml file: schema.yaml loaded sucessfully ]
+[2024-12-04 00:00:22,405: INFO: common: created directory at: artifacts]
+[2024-12-04 00:00:22,412: INFO: common: created directory at: artifacts/model_trainer]
+[2024-12-04 00:00:22,413: INFO: model_trainer: Training the model]
+[2024-12-04 00:00:22,486: INFO: main: ----------stage Model Training stage completed----------]
+[2024-12-04 00:00:22,486: INFO: main: ----------stage Model Evaluation stage started----------]
+[2024-12-04 00:00:22,498: INFO: common: yaml file: config\config.yaml loaded sucessfully ]
+[2024-12-04 00:00:22,501: INFO: common: yaml file: params.yaml loaded sucessfully ]
+[2024-12-04 00:00:22,514: INFO: common: yaml file: schema.yaml loaded sucessfully ]
+[2024-12-04 00:00:22,516: INFO: common: created directory at: artifacts]
+[2024-12-04 00:00:22,518: INFO: common: created directory at: artifacts/model_evaluation]
+[2024-12-04 00:00:52,230: INFO: main: ----------stage Model Evaluation stage completed----------]
